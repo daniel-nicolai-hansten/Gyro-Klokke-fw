@@ -1,0 +1,14 @@
+BOARD=stm32f030_demo
+BUILD_DIR=build
+CMAKE_CXX_COMPILER=C\:/Program Files (x86)/GNU Tools Arm Embedded/9 2019-q4-major/bin/arm-none-eabi-gcc.exe
+CMAKE_C_COMPILER=C\:/Program Files (x86)/GNU Tools Arm Embedded/9 2019-q4-major/bin/arm-none-eabi-gcc.exe
+CMAKE_GDB=C\:/Program Files (x86)/GNU Tools Arm Embedded/9 2019-q4-major/bin/arm-none-eabi-gdb.exe
+CMAKE_GENERATOR=Ninja
+CMAKE_MAKE_PROGRAM=C\:/ProgramData/chocolatey/bin/ninja.exe
+GNUARMEMB_TOOLCHAIN_PATH=C\:\\Program Files (x86)\\GNU Tools Arm Embedded\\9 2019-q4-major
+SOURCE_DIR=src
+WEST=C\:/Python38/Scripts/west.exe
+ZEPHYR_BASE_LOCATION=C\:\\Users\\dnh\\zephyrproject\\zephyr
+ZEPHYR_BOARD_DEBUG_RUNNER=openocd
+ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+eclipse.preferences.version=1

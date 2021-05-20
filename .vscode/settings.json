@@ -1,0 +1,8 @@
+{
+    "env" : {
+        "myZephyrSourcePath": "/Users/daniel.hansten/zephyrproject",
+    },  
+
+    "cmake.configureOnOpen": false,
+
+}

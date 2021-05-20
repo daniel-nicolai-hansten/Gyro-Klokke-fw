@@ -1,0 +1,14 @@
+identifier: stm32f030_gyro_klokke
+name: stm32f030_gyro_klokke
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 4
+flash: 16
+supported:
+  - uart
+  - gpio
+  - i2c
