@@ -33,7 +33,8 @@ jobs:
           west init ~/zephyrproject --mr v2.5.0
           cd ~/zephyrproject
           west update
-          cp -rv $GITHUB_WORKSPACE ~/zephyrproject/project
+          rsync -rv --exclude=.gitdir $GITHUB_WORKSPACE ~/zephyrproject/project
+          docker run -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest dir .west/config
 
       - name: Build FW
         run: |
