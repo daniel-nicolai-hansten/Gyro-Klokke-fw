@@ -34,6 +34,7 @@ jobs:
           cd ~/zephyrproject
           west update
           rsync -rv --exclude=.gitdir $GITHUB_WORKSPACE ~/zephyrproject/project
+          chmod 666 ~/zephyrproject/.west/config
           docker run -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest ls -lh .west/config
 
       - name: Build FW
