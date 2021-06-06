@@ -38,7 +38,7 @@ jobs:
 
       - name: Build FW
         run: |
-          docker run -ti -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest west build project -b nrf52_gyro_klokke
+          docker run -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest west build project -b nrf52_gyro_klokke
           cp ~/zephyrproject/project/build/zephyr.elf /tmp/nrf52_gyro_klokke.elf
 
       - name: Release
