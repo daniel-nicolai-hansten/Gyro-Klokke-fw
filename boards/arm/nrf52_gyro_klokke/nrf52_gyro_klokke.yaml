@@ -1,0 +1,17 @@
+identifier: nrf52_gyro_klokke
+name: E73-minimal-NRF52840
+type: mcu
+arch: arm
+ram: 256
+flash: 1024
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+supported:
+  - ble
+  - ieee802154
+  - pwm
+  - spi
+  - watchdog
+  - counter
