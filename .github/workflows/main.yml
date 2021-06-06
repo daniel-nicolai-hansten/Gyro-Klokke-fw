@@ -33,6 +33,6 @@ jobs:
           west init ~/zephyrproject --mr v2.5.0
           cd ~/zephyrproject
           west update
-          mount -o bind $GITHUB_WORKSPACE ~/zephyrproject/project
+          sudo mount -o bind $GITHUB_WORKSPACE ~/zephyrproject/project
           docker run -ti -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest west build project -b nrf52_gyro_klokke
           echo test, and deploy your project.
