@@ -33,8 +33,7 @@ jobs:
           west init ~/zephyrproject --mr v2.5.0
           cd ~/zephyrproject
           west update
-          mkdir ~/zephyrproject/project
-          sudo mount -o bind $GITHUB_WORKSPACE ~/zephyrproject/project
+          cp -rv $GITHUB_WORKSPACE ~/zephyrproject/project
 
       - name: Build FW
         run: |
