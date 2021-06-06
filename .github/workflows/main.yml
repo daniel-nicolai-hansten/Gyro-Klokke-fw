@@ -30,9 +30,9 @@ jobs:
       - name: Run a multi-line script
         run: |
           pip3 install --user -U west
-          west init ~/zephyrproject
+          west init ~/zephyrproject --mr v2.5.0
           cd ~/zephyrproject
           west update
           mount -o bind $GITHUB_WORKSPACE ~/zephyrproject/project
-          docker run -ti -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest west build project
+          docker run -ti -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest west build project -b nrf52_gyro_klokke
           echo test, and deploy your project.
