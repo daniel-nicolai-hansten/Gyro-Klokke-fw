@@ -33,4 +33,6 @@ jobs:
           west init ~/zephyrproject
           cd ~/zephyrproject
           west update
+          mount -o bind $GITHUB_WORKSPACE ~/zephyrproject/project
+          docker run -ti -v ~/zephyrproject:/workdir zephyrprojectrtos/zephyr-build:latest west build project
           echo test, and deploy your project.
