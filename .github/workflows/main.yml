@@ -43,6 +43,7 @@ jobs:
       - name: Build FW
         run: |
           cd ~/zephyrproject/project
+          find .
           west build project -b nrf52_gyro_klokke
           cp ~/zephyrproject/project/build/zephyr.elf /tmp/nrf52_gyro_klokke.elf
 
