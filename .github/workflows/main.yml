@@ -37,14 +37,14 @@ jobs:
           ./zephyr-sdk-0.12.4-x86_64-linux-setup.run -- -d ~/zephyr-sdk-0.12.4
           cd ~/zephyrproject
           west update
-          rsync -rv --exclude=.gitdir $GITHUB_WORKSPACE ~/zephyrproject/project
+          rsync -rv --exclude=.git $GITHUB_WORKSPACE ~/zephyrproject/project
           
 
       - name: Build FW
         run: |
-          cd ~/zephyrproject/project
+          cd ~/zephyrproject
           find .
-          west build project -b nrf52_gyro_klokke
+          west build $GITHUB_WORKSPACE -b nrf52_gyro_klokke
           cp ~/zephyrproject/project/build/zephyr.elf /tmp/nrf52_gyro_klokke.elf
 
       - name: Release
